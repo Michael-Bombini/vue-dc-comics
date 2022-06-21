@@ -1,5 +1,5 @@
 <template>
-    <nav class="p-4">
+    <nav class="p-3">
         <div class="container">
             <header class="d-flex align-items-center justify-content-between">
                 <img src="../assets/img/dc-logo.png" alt="">
