@@ -1,10 +1,10 @@
 <template>
     <footer>
-        <div class="container">
-            <div class="row">
+        <div class="container d-flex">
+            <div class="row col-6">
                 <ul class="row">
                     <li class="col-4" v-for="item in footerLink" :key="item">
-                        <h2>{{item.nomeLink}}</h2>
+                        <h2 class="py-3">{{item.nomeLink}}</h2>
                         <p v-for="element in item.link" :key="element">
                         {{ element }}
                         </p>
@@ -12,8 +12,11 @@
                 </ul>
                  
             </div>
+            <div class="h-100">
+                <img class="logo-dc" src="../assets/img/dc-logo-bg.png" alt="">
+            </div>
         </div>
-        <img class="logo-dc" src="../assets/img/dc-logo-bg.png" alt="">
+    
     </footer>
 </template>
 
@@ -56,8 +59,8 @@
 
 footer {
     background-image: url("../assets/img/footer-bg.jpg");
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -66,13 +69,17 @@ footer {
 .logo-dc {
     position: absolute;
     top: 50%;
-    left: 80%;
+    left: 70%;
     transform: translate(-50%, -50%);
     overflow: hidden;
     max-width: 100%;
-    max-height: 100%;
  
 }
+
+p {
+    color: darken($white , 40%);
+}
+
 }
 
 

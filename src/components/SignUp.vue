@@ -35,6 +35,7 @@
 @import "../assets/style/main.scss";
 .sign-up {
     background-color: $light-black;
+    position: relative;
 
 
 h3{
