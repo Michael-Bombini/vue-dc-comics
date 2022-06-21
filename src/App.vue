@@ -6,6 +6,7 @@
     <TheContent/>
     <IconBanner/>
     <TheFooter/>
+    <SignUp/>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import TheNavBar from './components/TheNavBar.vue';
 import TheContent from './components/TheContent.vue';
 import IconBanner from './components/IconBanner.vue';
 import TheFooter from './components/TheFooter.vue';
+import SignUp from './components/SignUp.vue';
 
 
 export default {
@@ -22,7 +24,8 @@ export default {
     TheNavBar,
     TheContent,
     IconBanner,
-    TheFooter
+    TheFooter,
+    SignUp
 }
 }
 </script>

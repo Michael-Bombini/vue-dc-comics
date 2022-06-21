@@ -65,12 +65,13 @@ footer {
 
 .logo-dc {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 80%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     overflow: hidden;
     max-width: 100%;
-    object-fit: cover;
+    max-height: 100%;
+ 
 }
 }
 
