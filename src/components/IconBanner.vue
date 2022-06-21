@@ -2,7 +2,7 @@
     <div class="banner p-5">
         <div class="container">
             <ul class="d-flex justify-content-around">
-                <li v-for="icon in icons" :key="icon">
+                <li v-for="icon in icons" :key="icon.iconName">
                         <img :src="require(`@/assets/img/buy-${icon.iconName}.${icon.extension}`)" alt="icon.iconName">
                         <span>{{icon.title}}</span>
 

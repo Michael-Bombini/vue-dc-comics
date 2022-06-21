@@ -3,7 +3,7 @@
         <div class="container d-flex">
             <div class="row col-6">
                 <ul class="row">
-                    <li class="col-4" v-for="item in footerLink" :key="item">
+                    <li class="col-4" v-for="item in footerLink" :key="item.nomeLink">
                         <h2 class="py-3">{{item.nomeLink}}</h2>
                         <p v-for="element in item.link" :key="element">
                         {{ element }}
