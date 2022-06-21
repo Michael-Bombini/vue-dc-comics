@@ -5,7 +5,7 @@
     <TheNavBar/>
     <TheContent/>
     <IconBanner/>
-
+    <TheFooter/>
   </div>
 </template>
 
@@ -13,6 +13,7 @@
 import TheNavBar from './components/TheNavBar.vue';
 import TheContent from './components/TheContent.vue';
 import IconBanner from './components/IconBanner.vue';
+import TheFooter from './components/TheFooter.vue';
 
 
 export default {
@@ -20,7 +21,8 @@ export default {
   components: {
     TheNavBar,
     TheContent,
-    IconBanner
+    IconBanner,
+    TheFooter
 }
 }
 </script>
