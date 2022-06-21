@@ -5,13 +5,13 @@
                 <button type="button" class="btn btn-outline-primary text-light p-3">SIGN UP NOW</button>
             </div>
             <div>
-               <div class="d-flex gap-2">
-                <h3>FOLLOW US</h3>
+               <div class="d-flex gap-3">
+                <h3>Follow Us</h3>
                 <img src="../assets/img/footer-facebook.png" alt="" />
-                <img src="../assets/img/footer-periscope.png" alt="" />
-                <img src="../assets/img/footer-pinterest.png" alt="" />
                 <img src="../assets/img/footer-twitter.png" alt="" />
                 <img src="../assets/img/footer-youtube.png" alt="" />
+                <img src="../assets/img/footer-periscope.png" alt="" />
+                <img src="../assets/img/footer-pinterest.png" alt="" />
             </div>
                 
             </div>
