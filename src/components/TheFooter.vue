@@ -2,16 +2,15 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-4" v-for="link in footerLink" :key="link.nomeLink">
-        
-                
-                    <h2>{{link.nomeLink}}</h2>
-                    <ul>
-                        <li v-for="(linkTest,i) in footerLink.link" :key="i">A</li>
-                    </ul>
-            
-             
-                </div>
+                <ul>
+
+            <li v-for="(item,i) in footerLink" :key="i">
+            <h2>{{item.nomeLink}}</h2>
+            <span v-for="(element,i) in item.link" :key="i">
+            {{ element }}
+            </span>
+            </li>
+                </ul>
                 
             </div>
         </div>
