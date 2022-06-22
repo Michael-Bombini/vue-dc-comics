@@ -5,10 +5,13 @@
   </div>
   
   <div class="series pt-5 text-center">
+    <div class="current-series">
+      CURRENT SERIES
+    </div>
     <div class="container p-4">
       <div class="row g-4">
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 " v-for="(comic,i) in comics" :key="comic.series">
-        <CardComic :imgUrl="comic.thumb" :id="i" :series="comic.series" @click="getIndex(i)"></CardComic>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 " v-for="(comic,i) in comics" :key="comic.series" @click="getIndex(i)">
+        <CardComic :imgUrl="comic.thumb" :id="i" :series="comic.series"></CardComic>
         </div>
       </div>
       
@@ -103,14 +106,14 @@ import CardComic from './CardComic.vue';
 ],
   
   currentBanner : require("../../public/img/jumbotron.jpg"),
-  currentIndex : null,
+  currentIndex : 0,
         }
     },
 
- methods() {
+ methods: {
 
   getIndex : function(i){
-    this.currentIndex = i;
+    this.currentBanner = this.comics[i].thumb;
   }
   
  }   
@@ -125,19 +128,22 @@ import CardComic from './CardComic.vue';
 @import "../assets/style/main.scss";
 
 .jumbotron {
-    padding-top: 100px ;
     background-repeat: no-repeat;
     background-size: cover;
 
   img {
-    max-width: 100%;
+    min-width: 100%;
+    max-height: 600px;
   }
 
 }
 
+
 .series {
   background-color: $dark-black;
+  position: relative;
 
+  .current-series {position: absolute; color: $white; top: -3%; left: 15%; background-color: $light-blue; padding: 0.8rem 1.2rem; font-weight: bold;}
 }
 
 
