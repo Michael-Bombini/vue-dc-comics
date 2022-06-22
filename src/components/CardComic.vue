@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="fumetto m-4 text-left" :style="`background-image: ${imgUrl}`">
+        <div class="fumetto  text-left" :style="`background-image: ${imgUrl}`">
             <img class="card-img-top" :src="imgUrl" :alt="`Fumetto della serie di ${series}`"/>
             <div class="nome-serie">{{series}}</div>
         </div>
@@ -27,9 +27,8 @@
 
 
 .fumetto {
-    width: 200px;
-    height: 200px;
-    aspect-ratio: 1/1;
+
+    aspect-ratio: 1;
 
 img {
     max-width: 100%;
