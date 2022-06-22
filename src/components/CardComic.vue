@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="fumetto m-4">
+        <div class="fumetto m-4 text-left" :style="`background-image: ${imgUrl}`">
             <img class="card-img-top" :src="imgUrl" :alt="`Fumetto della serie di ${series}`"/>
             <div class="nome-serie">{{series}}</div>
         </div>
@@ -44,6 +44,10 @@ img {
 }
 
 
+}
+
+.text-left {
+    text-align: left;
 }
 
 

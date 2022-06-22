@@ -1,16 +1,19 @@
 <template>
 <div>
-  <div class="jumbotron" style="background-image: require(url('../../public/jumbotron.jpg'))">
+  <div class="jumbotron">
+  <img :src="currentBanner" alt="">
   </div>
   
-  <div class="series py-5">
+  <div class="series pt-5 text-center">
     <div class="container p-4">
       <div class="row g-4">
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 " v-for="comic in comics" :key="comic.series">
-        <CardComic :imgUrl="comic.thumb" :series="comic.series"></CardComic>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 " v-for="(comic,i) in comics" :key="comic.series">
+        <CardComic :imgUrl="comic.thumb" :id="i" :series="comic.series" @click="getIndex(i)"></CardComic>
         </div>
       </div>
+      
   </div>
+  <button class="btn btn-primary text-light my-4">LOAD MORE</button>
 </div>
 
 </div>
@@ -98,10 +101,19 @@ import CardComic from './CardComic.vue';
     "type": "graphic novel"
   }
 ],
-
-  currentBanner : ("../assets/img/jumbotron"),
+  
+  currentBanner : require("../../public/img/jumbotron.jpg"),
+  currentIndex : null,
         }
-    }
+    },
+
+ methods() {
+
+  getIndex : function(i){
+    this.currentIndex = i;
+  }
+  
+ }   
     
 
     
@@ -113,14 +125,19 @@ import CardComic from './CardComic.vue';
 @import "../assets/style/main.scss";
 
 .jumbotron {
-    padding: 200px 0 ;
+    padding-top: 100px ;
     background-repeat: no-repeat;
     background-size: cover;
+
+  img {
+    max-width: 100%;
+  }
 
 }
 
 .series {
   background-color: $dark-black;
+
 }
 
 
