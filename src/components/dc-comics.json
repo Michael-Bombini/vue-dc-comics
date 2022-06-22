@@ -1,29 +1,4 @@
-<template>
-<div>
-
-    <div class="jumbotron"></div>
-    <div class="row">
-    <div class="col-2" v-for="comic in comics" :key="comic.series">
-        <CardComic :imgUrl="comic.thumb"
-        
-        ></CardComic>
-    </div>
-    </div>
-
-
-
-</div>
-</template>
-
-<script>
-import CardComic from './CardComic.vue';
-    export default {
-    name: "TheContent",
-    components: { CardComic },
-
-    data(){
-        return{
-            comics : [
+[
   {
     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
     "price": "$19.99",
@@ -97,26 +72,3 @@ import CardComic from './CardComic.vue';
     "type": "graphic novel"
   }
 ]
-        }
-    }
-    
-
-    
-}
-
-</script>
-
-<style lang="scss" scoped>
-@import "../assets/style/main.scss";
-
-
-.jumbotron {
-    background-image: url("../assets/img/jumbotron.jpg");
-    padding: 200px 0 ;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
-}
-
-</style>
