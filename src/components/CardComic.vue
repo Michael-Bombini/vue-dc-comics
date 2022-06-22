@@ -1,14 +1,14 @@
 <template>
     <div>
-        <div class="card" style="width: 18rem;">
+        <div class="fumetto m-4">
             <img class="card-img-top" :src="imgUrl" :alt="`Fumetto della serie di ${series}`"/>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
+            <div class="nome-serie">{{series}}</div>
         </div>
-    </div>
+
+
+        
+        </div>
+
 </template>
 
 <script>
@@ -24,5 +24,27 @@
 </script>
 
 <style lang="scss" scoped>
+
+
+.fumetto {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1/1;
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.nome-serie {
+    color: #fff;
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+}
+
+
+}
+
 
 </style>

@@ -1,16 +1,17 @@
 <template>
 <div>
-
-    <div class="jumbotron"></div>
-    <div class="row">
-    <div class="col-2" v-for="comic in comics" :key="comic.series">
-        <CardComic :imgUrl="comic.thumb"
-        
-        ></CardComic>
-    </div>
-    </div>
-
-
+  <div class="jumbotron" style="background-image: require(url('../../public/jumbotron.jpg'))">
+  </div>
+  
+  <div class="series py-5">
+    <div class="container p-4">
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 " v-for="comic in comics" :key="comic.series">
+        <CardComic :imgUrl="comic.thumb" :series="comic.series"></CardComic>
+        </div>
+      </div>
+  </div>
+</div>
 
 </div>
 </template>
@@ -96,7 +97,9 @@ import CardComic from './CardComic.vue';
     "series": "Catwoman",
     "type": "graphic novel"
   }
-]
+],
+
+  currentBanner : ("../assets/img/jumbotron"),
         }
     }
     
@@ -109,14 +112,17 @@ import CardComic from './CardComic.vue';
 <style lang="scss" scoped>
 @import "../assets/style/main.scss";
 
-
 .jumbotron {
-    background-image: url("../assets/img/jumbotron.jpg");
     padding: 200px 0 ;
     background-repeat: no-repeat;
     background-size: cover;
 
-
 }
+
+.series {
+  background-color: $dark-black;
+}
+
+
 
 </style>
