@@ -1,8 +1,5 @@
 <template>
-    <div>
-        <div class="container">
-           Content goes here
-        </div>
+    <div class="jumbotron">
     </div>
 </template>
 
@@ -15,16 +12,15 @@
 
 <style lang="scss" scoped>
 @import "../assets/style/main.scss";
-div {
-    background-color: $dark-black;
-    padding: 30px 4rem;
 
-.container {
-    color: $white;
-    font-weight: bolder;
-    font-size: 1.8rem;
 
-}
+.jumbotron {
+    background-image: url(../assets/img/jumbotron.jpg);
+    padding: 200px 0 ;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 }
 
 </style>
