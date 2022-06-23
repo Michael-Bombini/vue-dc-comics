@@ -126,9 +126,24 @@ import CardComic from './CardComic.vue';
 
   getIndex : function(i){
     this.currentBanner = this.comics[i].jumbo;
+  },
+
+  cambiaImmagine : function(){
+     this.currentBanner = this.comics[this.currentIndex].jumbo;
+      this.currentIndex++;
+       if(this.currentIndex>11)
+  this.currentIndex=0;
   }
   
- }   
+ },
+ 
+created(){
+  this.currentIndex = 0 ;
+},
+
+mounted(){
+  setInterval(this.cambiaImmagine,1500);
+}
     
 
     
