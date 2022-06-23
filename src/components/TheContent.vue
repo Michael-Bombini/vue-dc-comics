@@ -11,7 +11,7 @@
     <div class="container p-4">
       <div class="row g-4">
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 " v-for="(comic,i) in comics" :key="comic.series" @click="getIndex(i)">
-        <CardComic :imgUrl="comic.thumb" :id="i" :series="comic.series"></CardComic>
+        <CardComic :imgUrl="comic.thumb" :id="i" :series="comic.series" :price="comic.price" :type="comic.type"></CardComic>
         </div>
       </div>
       
