@@ -142,7 +142,7 @@ created(){
 },
 
 mounted(){
-  setInterval(this.cambiaImmagine,1500);
+  setInterval(this.cambiaImmagine,2000);
 }
     
 
