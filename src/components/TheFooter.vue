@@ -67,12 +67,7 @@ footer {
     position: relative;
 
 .logo-dc {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    max-width: 100%;
+    width: 100%;
  
 }
 
@@ -82,7 +77,13 @@ p {
 
 }
 
-
+div.h-100 {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
 
 
 </style>
